@@ -6,3 +6,8 @@ terraform {
     dynamodb_table = "terraform-state-lock"
   }
 }
+
+
+resource "time_sleep" "state-file-lock" {
+  create_duration = "150s"
+}
